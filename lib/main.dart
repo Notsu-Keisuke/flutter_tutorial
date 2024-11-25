@@ -15,9 +15,19 @@ class MyApp extends StatelessWidget {
           title: const Text(appTitle),
         ),
         body: const Center(
-          child: Text('Hello World'),
+          child: TitleSection(name: name, location: location),
         ),
       ),
     );
   }
 }
+
+class TitleSection extends StatelessWidget {
+  const TitleSection({
+    super.key,
+    required this.name,
+    required this.location,
+  });
+
+  final String name;
+  final String location;
